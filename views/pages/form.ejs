@@ -1,50 +1,47 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>
-        Dania form
+         form
     </title>
     <link rel="stylesheet" href="styles/base.css">
 </head>
-
 <body>
     <header>
         <h1>
-         Best Books!
+            Best Books!
         </h1>
     </header>
     <main>
         <p>
             <a href="/show">list of book</a>
         </p>
-      
-        <form action="/" method="GET">
+        <form action="/searches" method="post">
             <label>
                 <span>
                     Name of the book
                 </span>
-                <input type="title" name="search" />
+                <input type="text" name="text" placeholder="Enter a title or author"/>
             </label>
             <label>
                 <span>
-                        Title
+                    Title
                 </span>
-                    <input  type="radio" name="searchResult"  value="Title"/> 
+                <input type="radio" name="searchResult" value="title" />
             </label>
             <label>
-                    <span>
-                       Author
-                    </span>
-                    <input type="radio" name="searchResult"  value="Author"/>
-                </label>
-            <button type="button" > Search </button>
+                <span>
+                    Author
+                </span>
+                <input type="radio" name="searchResult" value="author" />
+            </label>
+            <button> Search </button>
         </form>
     </main>
     <footer>
-        This web is done by Dania
+        This web is done by Dania and bayan
     </footer>
 </body>
-
-    
 </html>
+
+
