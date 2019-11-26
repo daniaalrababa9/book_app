@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>
         Dania Template
     </title>
     <link rel="stylesheet" href="styles/base.css">
-
 </head>
-
 <body>
     <main>
         <ul>
-            <!-- <p>The titles</p>
-            <% show.forEach((book)=> { %>
+            <% books.forEach((book)=> { %>
+            <p>The titles</p>
             <li><%= book.volumeInfo.title %></li>
-            <% }); %>
             <p>The authors</p>
-            <% show.forEach((book)=> { %>
             <li><%= book.volumeInfo.authors[0] %></li>
-            <% }); %>
             <p>The descriptions</p>
-            <% show.forEach((book)=> { %>
             <li><%= book.volumeInfo.description %></li>
-            <% }); %>
             <p>The imageLinks</p>
-            <% show.forEach((book)=> { %>
-            <li><%= book.volumeInfo.imageLinks.thumbnail %></li>
-            <% }); %> -->
-
+            <li>
+                    <li><img src="<%= (book.volumeInfo.imageLinks)? book.volumeInfo.imageLinks.thumbnail:"" %>"></li>
+            <% }); %>
         </ul>
     </main>
 </body>
-
 </html>
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Dania Template
+    </title>
+    <link rel="stylesheet" href="styles/base.css">
+</head>
+<body>
+    <main>
+        <ul>
+            <% books.forEach((book)=> { %>
+            <p>The titles</p>
+            <li><%= book.volumeInfo.title %></li>
+            <p>The authors</p>
+            <li><%= (book.volumeInfo.authors)? book.volumeInfo.authors[0]:"" %></li>
+            <p>The descriptions</p>
+            <li><%= book.volumeInfo.description %></li>
+            <p>The image</p>
+            <li><img src="<%= (book.volumeInfo.imageLinks)? book.volumeInfo.imageLinks.thumbnail:"" %>"></li>
+            <% }); %>
+        </ul>
+    </main>
+</body>
+</html> -->
