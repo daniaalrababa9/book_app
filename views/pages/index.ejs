@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="/public/styles/base.css">
+  </head>
+  <body>
+    <header><h1>saved books</h1>
+    <div><a href="/searches"> Search</a></div>
+
+    </header>
+ 
+  <main>
+
+    
+        <% data.forEach((book)=> { %>
+       <div> <ul>
+          <p>The titles</p>
+          <li><%= book.title %></li>
+          <p>The authors</p>
+          <li><%= book.authors %></li>
+          <p>The ISBN</p>
+          <li><%= book.isbn %></li>
+          <p>The descriptions</p>
+          <li><%= book.description %></li>
+          <p>The imageLink</p>
+          <li><%= book.imgURL %>"</li>
+    </ul></div>
+   <% })    %>
+
+
+
+    </main>
+
+
+  </body>
+</html
