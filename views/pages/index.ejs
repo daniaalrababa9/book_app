@@ -23,8 +23,28 @@
           <p>The descriptions</p>
           <li><%= book.description %></li>
           <p>The imageLink</p>
-          <li><%= book.imgURL %>"</li>
+          <li><%= book.imgurl %>"</li>
     </ul></div>
+    <form action="/update/<%- book.id %>" method="post" >
+      <input type="hidden" name="_method" value="put">
+      <input type="text" name="id" value='<%= book.id %>'>
+      <input type="text" name="title" value='<%= book.title %>'>
+      <input type="text" name="authors" value='<%= book.authors %>'>
+      <input type="text" name="isbn" value='<%= book.isbn %>'>
+      <input type="text" name="description" value='<%= book.description%>'>
+      <input type="text" name="imgURL" value='<%= book.imgurl %>'>
+      <button>Update</button>
+  </form>
+  <form action="/delete/<%- book.id %>" method="post" >
+    <input type="hidden" name="_method" value="delete">
+    <input type="text" name="id" value='<%= book.id %>'>
+    <input type="text" name="title" value='<%= book.title %>'>
+    <input type="text" name="authors" value='<%= book.authors %>'>
+    <input type="text" name="isbn" value='<%= book.isbn %>'>
+    <input type="text" name="description" value='<%= book.description%>'>
+    <input type="text" name="imgURL" value='<%= book.imgurl %>'>
+    <button>delete</button>
+</form>
    <% })    %>
 
 
